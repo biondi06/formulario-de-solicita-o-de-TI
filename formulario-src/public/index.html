@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de solicitação de TI</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+
+    <header class="footer-top">
+        <p>THOMAZ ALVES ADVOGADOS - SUPORTE TI</p>
+    </header>
+
+    <div id="container--main">
+        <div class="image--aside">
+            <div class="feedbackMessageError">
+                <span class="span--1"></span>
+                <button class="btn--close"></button>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnrKPfAqlexvKj0tRlHeuzBWffLikVTInyRQ&s" alt="Ilustração">
+        </div>
+
+        <main class="container--parent">
+            <div class="container">
+                <h1>Faça sua solicitação</h1>
+                <form id="contact-form" class="validator--form">
+                    <label for="user-name">Nome</label>
+                    <input type="text" id="user-name" name="nome" placeholder="Digite aqui" required><br>
+                    <label for="email">Endereço de e-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Ex: daniel.biondi@thomazalves.com.br" required><br>
+                    <label for="subject">Assunto</label>
+                    <select id="subject" name="assunto" required>
+                        <option value="">Selecione...</option>
+                        <option>Manutenção</option>
+                        <option>WEB</option>
+                        <option>Microsoft 365</option>
+                        <option>Equipamentos (mouse, teclado, fone e etc)</option>
+                        <option>Sugestão</option>
+                        <option value="Outros">Outros</option>
+                    </select><br>
+                    <textarea id="complaint" name="complaint" rows="5" maxlength="500" placeholder="Descreva o motivo da solicitação..." required></textarea>
+                    <div class="form-actions">
+                        <div class="checkbox--camp">
+                            <input type="checkbox" id="responsability" name="responsabilidade" required>
+                            <label for="responsability">Eu estou de acordo com os termos do site.</label>
+                        </div>
+                        <input class="btn" type="submit" value="Enviar">
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer-bottom">
+        <p>&copy; 2024 Thomaz Alves Advogados. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne o envio padrão do formulário
+
+            // Aqui você pode adicionar validação adicional se necessário
+
+            // Redireciona para a página de agradecimento
+            window.location.href = 'thank-you.html';
+        });
+    </script>
+
+</body>
+</html>
