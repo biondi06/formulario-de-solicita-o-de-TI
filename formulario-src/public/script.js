@@ -11,8 +11,6 @@
     const btnClose = document.querySelector('.btn--close')
     const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
 
-    // Criando bloqueio no envio de formulário para campos invalidos
-
     form.addEventListener('submit',function(e){
 
         if(!inputUser.value || !inputEmail.value || !inputSubject.value){
@@ -80,7 +78,6 @@
 
     }
 
-    // Criando bloqueio no botão "enviar"
 
     let btnSubmit = document.querySelector('.btn')
 

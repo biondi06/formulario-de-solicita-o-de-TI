@@ -15,18 +15,18 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Garante que o corpo ocupe pelo menos 100% da altura da tela */
+    min-height: 100vh; 
 }
 
 #container--main {
     display: flex;
     width: 100vw;
-    height: calc(100vh - 6rem); /* Ajusta a altura para incluir o rodapé inferior */
+    height: calc(100vh - 6rem); 
     background: radial-gradient(circle at top left, #041b33, #041b33 40%, #cdd1d3 60%, #cdd1d3), 
                 linear-gradient(135deg, rgba(4, 27, 51, 0.6), rgba(205, 209, 211, 0.6));
-    background-blend-mode: overlay; /* Combina os gradientes para criar um efeito visual rico */
-    background-size: 200% 200%; /* Aumenta o tamanho do gradiente para criar movimento */
-    animation: gradientShift 15s ease infinite; /* Animação para o fundo dinâmico */
+    background-blend-mode: overlay; 
+    background-size: 200% 200%; 
+    animation: gradientShift 15s ease infinite; 
 }
 
 @keyframes gradientShift {
@@ -45,17 +45,17 @@ body {
 .image--aside {
     width: 50%;
     display: flex;
-    justify-content: center; /* Centraliza a imagem horizontalmente */
-    align-items: center; /* Centraliza a imagem verticalmente */
+    justify-content: center; 
+    align-items: center; 
 }
 
 .image--aside img {
     height: 60rem;
-    border-radius: 24px; /* Bordas arredondadas para a imagem */
+    border-radius: 24px;
     transition: transform 0.3s ease;
-    background-color: #041b33; /* Define a cor de fundo da imagem */
-    filter: none; /* Remove qualquer filtro de cor adicional */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra moderna e suave */
+    background-color: #041b33; 
+    filter: none; 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); 
 }
 
 .image--aside img:hover {
@@ -69,30 +69,30 @@ body {
     align-items: center;
     width: 80%;
     max-width: 900px;
-    background: #ffffff; /* Fundo branco para contraste */
-    border-radius: 24px; /* Bordas arredondadas */
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2); /* Sombra moderna e profunda */
+    background: #ffffff; 
+    border-radius: 24px; 
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2); 
     padding: 2.5rem;
     animation: fadeIn 1s ease-out;
-    border: 1px solid #041b33; /* Borda azul para destaque */
+    border: 1px solid #041b33; 
 }
 
 h1 {
     font-weight: 700;
-    font-size: 4.5rem; /* Tamanho de fonte impactante */
+    font-size: 4.5rem; 
     margin-bottom: 2rem;
-    color: #041b33; /* Cor azul para o título */
+    color: #041b33; 
     text-align: center;
     animation: bounceIn 1s ease-out;
-    font-family: 'Poppins', sans-serif; /* Fonte moderna */
-    letter-spacing: 1px; /* Espaçamento entre letras */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Sombra de texto suave */
+    font-family: 'Poppins', sans-serif; 
+    letter-spacing: 1px; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); 
 }
 
 label {
     font-size: 1.6rem;
     font-weight: 600;
-    color: #041b33; /* Cor azul para labels */
+    color: #041b33; 
     margin-bottom: 0.5rem;
     display: block;
     width: 100%;
@@ -102,27 +102,27 @@ label {
 input, select, .list, #complaint {
     width: 100%;
     margin-bottom: 1.6rem;
-    padding: 1.4rem; /* Padding aumentado para conforto */
-    border-radius: 16px; /* Bordas arredondadas */
-    border: 1px solid #041b33; /* Borda azul fina e moderna */
-    background-color: #cdd1d3; /* Cor de fundo clara e moderna */
-    color: #041b33; /* Texto azul */
+    padding: 1.4rem; 
+    border-radius: 16px;
+    border: 1px solid #041b33; 
+    background-color: #cdd1d3; 
+    color: #041b33; 
     font-size: 1.6rem;
-    text-align: center; /* Centraliza o texto dentro dos inputs */
+    text-align: center; 
     transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
-    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra interna suave */
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 input::placeholder, #complaint::placeholder {
-    color: #041b33; /* Placeholder com cor azul */
+    color: #041b33; 
 }
 
 input:focus, select:focus, .list:focus, #complaint:focus {
-    background-color: #ffffff; /* Fundo branco ao focar */
-    border-color: #041b33; /* Borda azul ao focar */
+    background-color: #ffffff; 
+    border-color: #041b33; 
     box-shadow: 0 0 12px rgba(4, 27, 51, 0.3);
     outline: none;
-    transform: scale(1.02); /* Efeito de escala ao focar */
+    transform: scale(1.02); 
 }
 
 .checkbox--camp {
@@ -140,8 +140,8 @@ input:focus, select:focus, .list:focus, #complaint:focus {
 .checkbox--camp label {
     margin-left: 1rem;
     font-size: 1.5rem;
-    font-family: 'Poppins', sans-serif; /* Fonte moderna */
-    color: #041b33; /* Cor azul */
+    font-family: 'Poppins', sans-serif; 
+    color: #041b33; 
 }
 
 .form-actions {
@@ -149,16 +149,16 @@ input:focus, select:focus, .list:focus, #complaint:focus {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    margin-top: 2rem; /* Adiciona margem superior para separar do conteúdo acima */
+    margin-top: 2rem; 
 }
 
 .btn {
     width: 14rem;
     height: 5rem;
     margin-top: 1.6rem;
-    border-radius: 30px; /* Bordas arredondadas */
-    border: 2px solid #041b33; /* Borda azul destacada */
-    background: linear-gradient(135deg, #041b33, #cdd1d3); /* Botão com gradiente azul */
+    border-radius: 30px; 
+    border: 2px solid #041b33; 
+    background: linear-gradient(135deg, #041b33, #cdd1d3); 
     color: #ffffff;
     font-size: 1.8rem;
     font-weight: bold;
@@ -167,12 +167,11 @@ input:focus, select:focus, .list:focus, #complaint:focus {
 }
 
 .btn:hover {
-    background: linear-gradient(135deg, #002d50, #e0e3e5); /* Muda a cor do botão ao passar o mouse */
+    background: linear-gradient(135deg, #002d50, #e0e3e5); 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transform: translateY(-2px); /* Efeito de levantar o botão ao passar o mouse */
+    transform: translateY(-2px); 
 }
 
-/* Estilo base para o elemento select */
 select {
     width: 100%;
     padding: 1.4rem;
@@ -181,28 +180,28 @@ select {
     background-color: #cdd1d3;
     color: #041b33;
     font-size: 1.6rem;
-    text-align: center; /* Centraliza o texto das opções */
+    text-align: center; 
     box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-/* Centraliza as opções dentro do dropdown */
+
 select option {
     text-align: center;
 }
 
 .footer-top, .footer-bottom {
-    background-color: #041b33; /* Cor de fundo azul */
-    color: #ffffff; /* Cor do texto branco */
+    background-color: #041b33; 
+    color: #ffffff; 
     text-align: center;
-    padding: 1.6rem 0; /* Aumenta o padding para maior largura */
-    font-size: 2rem; /* Ajusta o tamanho da fonte para maior legibilidade */
-    font-weight: bold; /* Torna a fonte mais visível e moderna */
+    padding: 1.6rem 0; 
+    font-size: 2rem; 
+    font-weight: bold; 
 }
 
 .footer-bottom {
-    margin-top: auto; /* Garante que o rodapé inferior esteja na parte inferior da tela */
-    position: fixed; /* Fixa o rodapé inferior na parte inferior da tela */
-    width: 100%; /* Garante que o rodapé inferior ocupe toda a largura */
-    bottom: 0; /* Posiciona o rodapé na parte inferior da tela */
+    margin-top: auto; 
+    position: fixed; 
+    width: 100%; 
+    bottom: 0;
 }

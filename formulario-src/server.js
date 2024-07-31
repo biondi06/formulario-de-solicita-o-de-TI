@@ -6,35 +6,34 @@ const path = require('path');
 const app = express();
 const port = 3000;
 
-// Configuração do Body-Parser
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Servir arquivos estáticos
+
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Rota para o formulário
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Rota para receber dados do formulário
+
 app.post('/submit', (req, res) => {
   const { nome, email, assunto, complaint } = req.body;
 
-  // Configuração do transporte do Nodemailer para o Outlook
+ 
   const transporter = nodemailer.createTransport({
-    service: 'Outlook365', // Use 'Outlook365' para contas do Outlook
+    service: 'Outlook365', 
     auth: {
-      user: 'daniel.biondi@thomazalves.com.br', // E-mail que está enviando
-      pass: 'sua_senha_aqui'                    // Senha ou senha de aplicativo
+      user: 'daniel.biondi@thomazalves.com.br', 
+      pass: 'sua_senha_aqui'                    
     }
   });
 
-  // Configuração do e-mail com HTML para formato profissional
   const mailOptions = {
-    from: 'daniel.biondi@thomazalves.com.br', // O e-mail que está enviando
-    to: 'daniel.biondi@thomazalves.com.br',   // O mesmo e-mail para receber as mensagens
+    from: 'daniel.biondi@thomazalves.com.br', 
+    to: 'daniel.biondi@thomazalves.com.br',   
     subject: `Nova Solicitação de TI: ${assunto}`,
     html: `
       <html>
@@ -83,7 +82,7 @@ app.post('/submit', (req, res) => {
     `
   };
 
-  // Enviar o e-mail
+
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.error('Erro ao enviar o e-mail:', error);
@@ -94,7 +93,7 @@ app.post('/submit', (req, res) => {
   });
 });
 
-// Iniciar o servidor
+
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
 });
